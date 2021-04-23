@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "./header";
 import Slider from "./slider";
-import Features from "./features";
+import ProductCard from "./product-card";
 import Tab from "./tab";
 import Footer from "./footer";
 
@@ -11,7 +11,7 @@ const App = () => {
       <Header/>
       <main>
         <Slider/>
-        <Features/>
+        <ProductCard/>
         <Tab/>
       </main>
       <Footer/>
