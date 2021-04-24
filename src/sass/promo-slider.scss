@@ -1,0 +1,44 @@
+.promo-slider {
+  position: relative;
+
+  padding-top: 90px;
+
+  &::before {
+    content: "new model";
+    position: absolute;
+    display: block;
+
+    top: 90px;
+    left: 0;
+
+    width: 122px;
+    height: 30px;
+
+    padding: 7px;
+
+    font-family: "Open Sans", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 10px;
+
+    line-height: 14px;
+    letter-spacing: 0.07em;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: $color-white;
+    background-color: $color-red;
+  }
+}
+
+.promo-slider__panel {
+  display: flex;
+}
+
+.promo-slider__preview-list {
+  display: flex;
+  list-style: none;
+
+  margin: 0;
+}

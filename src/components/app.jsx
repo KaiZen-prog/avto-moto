@@ -1,17 +1,15 @@
 import React from "react";
 import Header from "./header";
-import PromoSlider from "./promo-slider";
-import ProductCard from "./product-card";
 import InfoSlider from "./info-slider";
 import Footer from "./footer";
+import ProductInfo from "./product-info";
 
 const App = () => {
   return (
     <>
       <Header/>
       <main>
-        <PromoSlider/>
-        <ProductCard/>
+        <ProductInfo/>
         <InfoSlider/>
       </main>
       <Footer/>
