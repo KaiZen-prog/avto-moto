@@ -1,8 +1,8 @@
 import React from "react";
 import Header from "./header";
-import Slider from "./slider";
+import PromoSlider from "./promo-slider";
 import ProductCard from "./product-card";
-import Tab from "./tab";
+import InfoSlider from "./info-slider";
 import Footer from "./footer";
 
 const App = () => {
@@ -10,9 +10,9 @@ const App = () => {
     <>
       <Header/>
       <main>
-        <Slider/>
+        <PromoSlider/>
         <ProductCard/>
-        <Tab/>
+        <InfoSlider/>
       </main>
       <Footer/>
     </>
