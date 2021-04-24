@@ -53,15 +53,23 @@
 
   border: none;
   background-color: transparent;
+}
 
-  &--left {
-    background-image: url("../img/icon-arrow-left.svg");
-    background-repeat: no-repeat;
+.promo-slider__left-button {
+  background-image: url("../img/icon-arrow-left.svg");
+  background-repeat: no-repeat;
+
+  &--disabled {
+    background-image: url("../img/icon-arrow-left-disabled.svg");
   }
+}
 
-  &--right {
-    background-image: url("../img/icon-arrow-right.svg");
-    background-repeat: no-repeat;
+.promo-slider__right-button {
+  background-image: url("../img/icon-arrow-right.svg");
+  background-repeat: no-repeat;
+
+  &--disabled {
+    background-image: url("../img/icon-arrow-right-disabled.svg");
   }
 }
 

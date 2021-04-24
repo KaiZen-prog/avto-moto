@@ -1,5 +1,5 @@
-import {extend} from "../../utils/common";
-import {ActionType} from "../actions";
+import {extend} from "../../../utils/common";
+import {ActionType} from "../../actions";
 
 const initialState = {
   comments: [],

@@ -3,13 +3,13 @@ import ReactDOM from "react-dom";
 import {composeWithDevTools} from "redux-devtools-extension";
 import {createStore} from "redux";
 import {Provider} from "react-redux";
-import {commentsReducer} from "./store/reducers/comments-reducer";
+import rootReducer from "./store/reducers/root-reducer";
 import "./sass/style.scss";
 import App from "./components/app";
 
 
 const store = createStore(
-    commentsReducer,
+    rootReducer,
     composeWithDevTools()
 );
 
