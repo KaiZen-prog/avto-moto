@@ -3,7 +3,16 @@ import {connect} from "react-redux";
 import {promoSlideLeft, promoSlideRight} from "../store/actions";
 import PropTypes from "prop-types";
 
-const PromoSlider = ({currentPromoSlider, toLeftSlideClick, toRightSlideClick, isLeftButtonDisabled, isRightButtonDisabled}) => {
+const PromoSlider = (props) => {
+
+  const {
+    currentPromoSlider,
+    toLeftSlideClick,
+    toRightSlideClick,
+    isLeftButtonDisabled,
+    isRightButtonDisabled
+  } = props;
+
   return (
     <div className="promo-slider">
       <div className="promo-slider__slide">
@@ -12,9 +21,9 @@ const PromoSlider = ({currentPromoSlider, toLeftSlideClick, toRightSlideClick, i
       <div className="promo-slider__panel">
         <button
           className={
-            isLeftButtonDisabled
-              ? `promo-slider__button promo-slider__left-button promo-slider__left-button--disabled`
-              : `promo-slider__button promo-slider__left-button`
+            `promo-slider__button promo-slider__left-button${
+              isLeftButtonDisabled ? ` promo-slider__left-button--disabled` : ``
+            }`
           }
           type="button"
           disabled={isLeftButtonDisabled}
@@ -36,9 +45,9 @@ const PromoSlider = ({currentPromoSlider, toLeftSlideClick, toRightSlideClick, i
 
         <button
           className={
-            isRightButtonDisabled
-              ? `promo-slider__button promo-slider__right-button promo-slider__right-button--disabled`
-              : `promo-slider__button promo-slider__right-button`
+            `promo-slider__button promo-slider__right-button${
+              isRightButtonDisabled ? ` promo-slider__right-button--disabled` : ``
+            }`
           }
           type="button"
           disabled={isRightButtonDisabled}
