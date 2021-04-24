@@ -32,13 +32,47 @@
   }
 }
 
+.promo-slider__slide {
+  margin-bottom: 35px;
+}
+
 .promo-slider__panel {
   display: flex;
+}
+
+.promo-slider__button {
+  display: block;
+
+  cursor: pointer;
+
+  width: 52px;
+  height: 52px;
+
+  margin-top: 14px;
+  padding: 0;
+
+  border: none;
+  background-color: transparent;
+
+  &--left {
+    background-image: url("../img/icon-arrow-left.svg");
+    background-repeat: no-repeat;
+  }
+
+  &--right {
+    background-image: url("../img/icon-arrow-right.svg");
+    background-repeat: no-repeat;
+  }
 }
 
 .promo-slider__preview-list {
   display: flex;
   list-style: none;
 
-  margin: 0;
+  margin: 0 6px 0 31px;
+  padding-left: 0;
+}
+
+.promo-slider__preview-image {
+  margin-right: 25px;
 }
