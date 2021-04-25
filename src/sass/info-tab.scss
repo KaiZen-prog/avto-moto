@@ -1,0 +1,104 @@
+.info-tab {
+  width: $page-container-width;
+  min-height: 410px;
+
+  margin: 0 auto;
+}
+
+.info-tab__buttons-list {
+  display: flex;
+  list-style: none;
+
+  margin: 0;
+  padding-left: 10px;
+}
+
+.info-tab__buttons-item {
+  display: block;
+
+  width: 195px;
+  height: 50px;
+
+  padding: 10px;
+
+  text-align: center;
+
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-size: 20px;
+  font-weight: normal;
+
+  line-height: 27px;
+
+  border: 1px solid $color-tab-grey;
+  box-sizing: border-box;
+
+  &:hover {
+    border-color: $color-red-hovered;
+  }
+
+  &--active {
+    background-color: $color-red;
+    color: $color-white;
+
+    border: none;
+
+    &:hover {
+      background-color: $color-red-hovered;
+    }
+  }
+}
+
+.info-tab__slides {
+  padding-top: 27px;
+  padding-left: 7px;
+}
+
+.info-tab__slide {
+  min-height: 354px;
+}
+
+.info-tab__parameters {
+  width: 571px;
+}
+
+.info-tab__line {
+  display: flex;
+
+  margin-bottom: 19px;
+  padding-bottom: 6px;
+
+  border-bottom: 1px solid $color-tab-grey;
+}
+
+.info-tab__parameter {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+
+  color: $color-dark;
+
+  padding-right: 20px;
+}
+
+.info-tab__value {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+
+  text-align: right;
+
+  margin-left: auto;
+}
+
+.info-tab__contacts-title {
+  margin-top: 0;
+}
+
+.info-tab__contacts-line {
+  margin-top: 0;
+}

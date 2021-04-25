@@ -1,0 +1,38 @@
+.footer {
+  margin-top: 119px;
+
+  background-color: $color-grey;
+}
+
+.footer__nav {
+  width: 1200px;
+
+  margin: 0 auto;
+  padding-left: 3px;
+}
+
+.footer__nav-list {
+  list-style: none;
+  display: flex;
+
+  margin-top: 0;
+  margin-right: -49px;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.footer__nav-link {
+  display: block;
+  text-align: center;
+
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+
+  color: $color-dark;
+
+  margin-right: 49px;
+  padding: 30px 9px 30px 9px;
+}

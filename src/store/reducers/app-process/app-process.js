@@ -1,15 +1,16 @@
 import {extend} from "../../../utils/common";
 import {ActionType} from "../../actions";
-import {PromoSlides} from "../../../const";
+import {PromoSlides, InfoTabs} from "../../../const";
 import {getPreviousElement, getNextElement} from "../../../utils/common";
 
 const initialState = {
   currentPromoSlide: PromoSlides[0],
   isLeftPromoSliderButtonDisabled: true,
-  isRightPromoSliderButtonDisabled: false
+  isRightPromoSliderButtonDisabled: false,
+  activeInfoTab: InfoTabs.CHARACTERISTICS
 };
 
-const appReducer = (state = initialState, action) => {
+const appProcess = (state = initialState, action) => {
   switch (action.type) {
     case ActionType.PROMO_SLIDE_LEFT:
       return extend(state, {
@@ -24,9 +25,14 @@ const appReducer = (state = initialState, action) => {
         isLeftPromoSliderButtonDisabled: false,
         isRightPromoSliderButtonDisabled: getNextElement(PromoSlides, state.currentPromoSlide) === PromoSlides[PromoSlides.length - 1]
       });
+
+    case ActionType.CHANGE_INFO_TAB:
+      return extend(state, {
+        activeInfoTab: action.payload
+      });
   }
 
   return state;
 };
 
-export {appReducer};
+export {appProcess};

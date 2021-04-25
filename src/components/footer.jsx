@@ -5,25 +5,25 @@ const Footer = () => {
     <footer className="footer">
       <nav className="footer__nav">
         <ul className="footer__nav-list">
-          <li className="footer__nav-item">
+          <li>
             <a className="footer__nav-link" href="#">Корпоративным клиентам</a>
           </li>
-          <li className="footer__nav-item">
+          <li>
             <a className="footer__nav-link" href="#">Клиентам</a>
           </li>
-          <li className="footer__nav-item">
+          <li>
             <a className="footer__nav-link" href="#">Аренда авто</a>
           </li>
-          <li className="footer__nav-item">
+          <li>
             <a className="footer__nav-link" href="#">Каршеринг</a>
           </li>
-          <li className="footer__nav-item">
+          <li>
             <a className="footer__nav-link" href="#">Как продать авто</a>
           </li>
-          <li className="footer__nav-item">
+          <li>
             <a className="footer__nav-link" href="#">Trade-In</a>
           </li>
-          <li className="footer__nav-item">
+          <li>
             <a className="footer__nav-link" href="#">Test-drive</a>
           </li>
         </ul>

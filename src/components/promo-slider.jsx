@@ -72,9 +72,9 @@ PromoSlider.propTypes = {
 };
 
 const mapStateToProps = (state) => ({
-  currentPromoSlider: state.APP.currentPromoSlide,
-  isLeftButtonDisabled: state.APP.isLeftPromoSliderButtonDisabled,
-  isRightButtonDisabled: state.APP.isRightPromoSliderButtonDisabled
+  currentPromoSlider: state.APP_PROCESS.currentPromoSlide,
+  isLeftButtonDisabled: state.APP_PROCESS.isLeftPromoSliderButtonDisabled,
+  isRightButtonDisabled: state.APP_PROCESS.isRightPromoSliderButtonDisabled
 });
 
 const mapDispatchToProps = (dispatch) => ({
