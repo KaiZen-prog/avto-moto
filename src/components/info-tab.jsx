@@ -66,7 +66,7 @@ const InfoTab = (props) => {
       <div className="info-tab__slides">
         <div
           className={
-            `info-tab__slide${
+            `info-tab__slide info-tab__slide--characteristics${
               activeInfoTab === InfoTabs.CHARACTERISTICS ? `` : ` hidden`
             }`
           }
@@ -161,37 +161,41 @@ const InfoTab = (props) => {
             }`
           }
         >
-          <div className="info-tab__contacts-block">
-            <p className="info-tab__contacts-title">
-              Адрес
-            </p>
-            <p className="info-tab__contacts-line">
-              Санкт-Петербург, набережная реки Карповки, дом 5
-            </p>
+          <div className="info-tab__map-wrapper">
+            <div className="info-tab__contacts-block">
+              <p className="info-tab__contacts-title info-tab__contacts-title--address">
+                Адрес
+              </p>
+              <p className="info-tab__contacts-line">
+                <p className="info-tab__contacts-line info-tab__address-line">Санкт-Петербург,</p>
+                <p className="info-tab__contacts-line info-tab__address-line">набережная реки Карповки, дом 5</p>
+              </p>
 
-            <p className="info-tab__contacts-title">
-              Режим работы
-            </p>
-            <p className="info-tab__contacts-line">
-              Ежедневно, с 10:00 до 21:00
-            </p>
+              <p className="info-tab__contacts-title">
+                Режим работы
+              </p>
+              <p className="info-tab__contacts-line">
+                Ежедневно, с 10:00 до 21:00
+              </p>
 
-            <p className="info-tab__contacts-title">
-              Телефон
-            </p>
-            <p className="info-tab__contacts-line">
-              8 (800) 333-55-99
-            </p>
+              <p className="info-tab__contacts-title">
+                Телефон
+              </p>
+              <p className="info-tab__contacts-line">
+                8 (800) 333-55-99
+              </p>
 
-            <p className="info-tab__contacts-title">
-              E-mail
-            </p>
-            <p className="info-tab__contacts-line">
-              info@avto-moto.ru
-            </p>
-          </div>
-          <div className="info-tab__map">
-            Здесь будет карта
+              <p className="info-tab__contacts-title">
+                E-mail
+              </p>
+              <p className="info-tab__contacts-line">
+                info@avto-moto.ru
+              </p>
+            </div>
+            <div id="map" className="info-tab__map-container">
+              <img className="info-tab__map-img" src="img/map.jpg" width="431" height="271"
+                alt="Санкт-Петербург, набережная реки Карповки, дом 5"/>
+            </div>
           </div>
         </div>
       </div>
