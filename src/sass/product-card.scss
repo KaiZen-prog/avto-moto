@@ -165,7 +165,8 @@
   color: $color-white;
   background-color: $color-red;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: $color-red-hovered;
   }
 }
@@ -182,7 +183,8 @@
   border: 1px solid $color-red;
   box-sizing: border-box;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: $color-white;
     background-color: $color-red;
   }
