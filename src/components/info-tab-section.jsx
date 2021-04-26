@@ -5,6 +5,7 @@ import {connect} from "react-redux";
 import {InfoTabs} from "../const";
 import Characteristics from "./characteristics";
 import Contacts from "./contacts";
+import Reviews from "./reviews";
 
 const InfoTabSection = (props) => {
 
@@ -67,17 +68,7 @@ const InfoTabSection = (props) => {
 
       <div className="info-tab__slides">
         <Characteristics isActive={activeInfoTab === InfoTabs.CHARACTERISTICS}/>
-
-        <div
-          className={
-            `info-tab__slide${
-              activeInfoTab === InfoTabs.REVIEWS ? `` : ` hidden`
-            }`
-          }
-        >
-          Здесь будут комментарии
-        </div>
-
+        <Reviews isActive={activeInfoTab === InfoTabs.REVIEWS}/>
         <Contacts isActive={activeInfoTab === InfoTabs.CONTACTS}/>
       </div>
     </section>
