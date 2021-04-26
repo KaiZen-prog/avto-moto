@@ -14,7 +14,7 @@ const PromoSlider = (props) => {
   } = props;
 
   return (
-    <div className="promo-slider">
+    <div className="product-section__promo-slider promo-slider">
       <div className="promo-slider__slide">
         <img className="promo-slider__preview-image" src={currentPromoSlider} width="600" height="375" alt="превью автомобиля"/>
       </div>

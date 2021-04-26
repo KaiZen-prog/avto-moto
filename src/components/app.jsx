@@ -1,16 +1,16 @@
 import React from "react";
 import Header from "./header";
-import InfoTab from "./info-tab";
+import InfoTabSection from "./info-tab-section";
 import Footer from "./footer";
-import ProductInfo from "./product-info";
+import ProductSection from "./product-section";
 
 const App = () => {
   return (
     <>
       <Header/>
       <main>
-        <ProductInfo/>
-        <InfoTab/>
+        <ProductSection/>
+        <InfoTabSection/>
       </main>
       <Footer/>
     </>

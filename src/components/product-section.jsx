@@ -2,15 +2,15 @@ import React from "react";
 import PromoSlider from "./promo-slider";
 import ProductCard from "./product-card";
 
-const ProductInfo = () => {
+const ProductSection = () => {
   return (
-    <section className="product-info-section">
+    <section className="product-section">
       <PromoSlider/>
       <ProductCard/>
     </section>
   );
 };
 
-ProductInfo.displayName = `ProductInfo`;
+ProductSection.displayName = `ProductSection`;
 
-export default ProductInfo;
+export default ProductSection;

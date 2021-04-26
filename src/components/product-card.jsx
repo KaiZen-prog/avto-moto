@@ -2,7 +2,7 @@ import React from "react";
 
 const ProductCard = () => {
   return (
-    <div className="product-card">
+    <div className="product-section__product-card product-card">
       <h1 className="product-card__header">Марпех 11</h1>
 
       <ul className="product-card__parameters-list">
