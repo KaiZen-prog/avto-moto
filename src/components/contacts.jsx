@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Contacts = ({isActive}) => {
+const Contacts = ({isTabActive}) => {
   return (
     <div className={`info-tab__slide contacts${
-      isActive ? `` : ` hidden`
+      isTabActive ? `` : ` hidden`
     }`}>
       <div className="contacts__wrapper">
         <div className="contacts__address-block">
@@ -49,7 +49,7 @@ const Contacts = ({isActive}) => {
 Contacts.displayName = `Contacts`;
 
 Contacts.propTypes = {
-  isActive: PropTypes.bool.isRequired,
+  isTabActive: PropTypes.bool.isRequired,
 };
 
 export default Contacts;

@@ -2,18 +2,18 @@ import {extend} from "../../../utils/common";
 import {ActionType} from "../../actions";
 
 const initialState = {
-  comments: [],
+  reviews: [],
 };
 
-const commentsReducer = (state = initialState, action) => {
+const reviewsReducer = (state = initialState, action) => {
   switch (action.type) {
-    case ActionType.ADD_COMMENT:
+    case ActionType.ADD_REVIEW:
       return extend(state, {
-        comments: [action.payload, ...state.comments],
+        reviews: [action.payload, ...state.reviews],
       });
   }
 
   return state;
 };
 
-export {commentsReducer};
+export {reviewsReducer};

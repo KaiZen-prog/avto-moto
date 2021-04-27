@@ -2,7 +2,7 @@ export const ActionType = {
   PROMO_SLIDE_LEFT: `PROMO_SLIDE_LEFT`,
   PROMO_SLIDE_RIGHT: `PROMO_SLIDE_RIGHT`,
   CHANGE_INFO_TAB: `CHANGE_INFO_TAB`,
-  ADD_COMMENT: `ADD_COMMENT`
+  ADD_REVIEW: `ADD_REVIEW`
 };
 
 export const promoSlideLeft = () => ({
@@ -18,7 +18,7 @@ export const changeInfoTab = (tab) => ({
   payload: tab
 });
 
-export const addComment = (comment) => ({
-  type: ActionType.ADD_COMMENT,
-  payload: (comment),
+export const addReview = (review) => ({
+  type: ActionType.ADD_REVIEW,
+  payload: (review),
 });

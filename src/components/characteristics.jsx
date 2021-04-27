@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Characteristics = ({isActive}) => {
+const Characteristics = ({isTabActive}) => {
   return (
     <div className={`info-tab__slide info-tab__slide--characteristics characteristics${
-      isActive ? `` : ` hidden`
+      isTabActive ? `` : ` hidden`
     }`}>
       <table className="characteristics__parameters">
         <tr className="characteristics__line">
@@ -84,7 +84,7 @@ const Characteristics = ({isActive}) => {
 Characteristics.displayName = `Characteristics`;
 
 Characteristics.propTypes = {
-  isActive: PropTypes.bool.isRequired,
+  isTabActive: PropTypes.bool.isRequired,
 };
 
 export default Characteristics;

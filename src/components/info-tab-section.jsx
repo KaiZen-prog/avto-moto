@@ -67,9 +67,9 @@ const InfoTabSection = (props) => {
       </ul>
 
       <div className="info-tab__slides">
-        <Characteristics isActive={activeInfoTab === InfoTabs.CHARACTERISTICS}/>
-        <Reviews isActive={activeInfoTab === InfoTabs.REVIEWS}/>
-        <Contacts isActive={activeInfoTab === InfoTabs.CONTACTS}/>
+        <Characteristics isTabActive={activeInfoTab === InfoTabs.CHARACTERISTICS}/>
+        <Reviews isTabActive={activeInfoTab === InfoTabs.REVIEWS}/>
+        <Contacts isTabActive={activeInfoTab === InfoTabs.CONTACTS}/>
       </div>
     </section>
   );

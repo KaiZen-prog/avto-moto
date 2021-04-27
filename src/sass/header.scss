@@ -17,7 +17,7 @@
   position: relative;
 
   padding-top: 20px;
-  padding-left: 85px;
+  padding-left: 90px;
 
   font-weight: 700;
   font-size: 20px;
@@ -35,7 +35,7 @@
     height: 55px;
 
     top: 15px;
-    left: 11px;
+    left: 16px;
 
     background-image: url("../img/logo.svg");
     background-repeat: no-repeat;
@@ -53,7 +53,7 @@
   margin: 0;
 
   &--bigger {
-  padding-left: 1px;
+    padding-left: 1px;
   }
 
   &--smaller {
@@ -85,6 +85,6 @@
   line-height: 22px;
   color: #48494D;
 
-  margin-left: 29px;
-  padding: 31px 20px 30px 20px;
+  margin-left: 37px;
+  padding: 31px 16px 30px 16px;
 }

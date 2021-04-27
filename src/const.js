@@ -9,3 +9,7 @@ export const InfoTabs = {
   REVIEWS: `Reviews`,
   CONTACTS: `Contacts`
 };
+
+export const KeyCode = {
+  ESC: 27,
+};

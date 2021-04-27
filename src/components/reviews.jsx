@@ -1,12 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
+import {withReviews} from '../hocs/with-reviews';
+import ReviewForm from '../components/review-form';
 
-const Reviews = ({isActive}) => {
+const Reviews = ({isTabActive, isFormOpened, onReviewFormOpen, onReviewFormClose}) => {
   return (
     <div className={`info-tab__slide reviews${
-      isActive ? `` : ` hidden`
+      isTabActive ? `` : ` hidden`
     }`}>
-      <button className="reviews__add-review-button">Оставить отзыв</button>
+      <button className="reviews__add-review-button" onClick={onReviewFormOpen}>Оставить отзыв</button>
       <div className="reviews__review">
         <h2 className="reviews__author">Борис Иванов</h2>
 
@@ -45,7 +47,7 @@ const Reviews = ({isActive}) => {
       <div className="reviews__review">
         <h2 className="reviews__author">Марсель Исмагилов</h2>
 
-        <ul className="reviews__list">
+        <ul className="reviews__elements-list">
           <li className="reviews__element reviews__element--advantage">
             <h4 className="reviews__title">Достоинства</h4>
             <p className="reviews__value">Cтиль, комфорт, управляемость</p>
@@ -76,6 +78,12 @@ const Reviews = ({isActive}) => {
           <a className="reviews__answer-button" href="#">Ответить</a>
         </div>
       </div>
+
+      {isFormOpened && (
+        <ReviewForm
+          onReviewFormClose={onReviewFormClose}
+        />
+      )}
     </div>
   );
 };
@@ -83,7 +91,11 @@ const Reviews = ({isActive}) => {
 Reviews.displayName = `Reviews`;
 
 Reviews.propTypes = {
-  isActive: PropTypes.bool.isRequired,
+  isTabActive: PropTypes.bool.isRequired,
+
+  isFormOpened: PropTypes.bool.isRequired,
+  onReviewFormOpen: PropTypes.func.isRequired,
+  onReviewFormClose: PropTypes.func.isRequired,
 };
 
-export default Reviews;
+export default withReviews(Reviews);
