@@ -6,6 +6,7 @@ const Characteristics = ({isTabActive}) => {
     <div className={`info-tab__slide info-tab__slide--characteristics characteristics${
       isTabActive ? `` : ` hidden`
     }`}>
+      <h2 className="visually-hidden">Характеристики</h2>
       <table className="characteristics__parameters">
         <tr className="characteristics__line">
           <td className="characteristics__parameter">
