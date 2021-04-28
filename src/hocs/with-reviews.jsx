@@ -53,7 +53,7 @@ export const withReviews = (Component) => {
     onSubmit(evt) {
       evt.preventDefault();
 
-      let validation = true;
+      let isValid = true;
 
       const requiredFields = evt.target.querySelectorAll(`.review-form__input--required`);
 
@@ -62,11 +62,11 @@ export const withReviews = (Component) => {
           evt.currentTarget.querySelector(`.review-form__required-message--${requiredFields[i].name}`).style.display = `block`;
           requiredFields[i].classList.add(`review-form__input--validation-error`);
 
-          validation = false;
+          isValid = false;
         }
       }
 
-      if (!validation) {
+      if (!isValid) {
         return;
       }
 
