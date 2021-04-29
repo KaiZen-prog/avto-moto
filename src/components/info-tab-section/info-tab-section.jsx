@@ -80,7 +80,7 @@ InfoTabSection.displayName = `InfoTabSection`;
 InfoTabSection.propTypes = {
   activeInfoTab: PropTypes.string.isRequired,
 
-  onInfoTabChange: PropTypes.func.isRequired,
+  onInfoTabChange: PropTypes.func.isRequired
 };
 
 const mapStateToProps = (state) => ({

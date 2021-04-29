@@ -52,7 +52,7 @@ const Contacts = ({isTabActive}) => {
 Contacts.displayName = `Contacts`;
 
 Contacts.propTypes = {
-  isTabActive: PropTypes.bool.isRequired,
+  isTabActive: PropTypes.bool.isRequired
 };
 
 export default Contacts;

@@ -1,9 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import {connect} from 'react-redux';
-import moment from 'moment';
-import {KeyCode} from '../const';
-import {addReview} from '../store/actions';
+import React from "react";
+import PropTypes from "prop-types";
+import {connect} from "react-redux";
+import moment from "moment";
+import {KeyCode} from "../const";
+import {addReview} from "../store/actions";
 
 export const withReviews = (Component) => {
   class WithReviews extends React.PureComponent {

@@ -11,8 +11,8 @@ const PromoSlider = (props) => {
     promoSlides,
     currentPromoSlide,
 
-    toLeftSlideClick,
-    toRightSlideClick,
+    onLeftSlideClick,
+    onRightSlideClick,
 
     isLeftButtonDisabled,
     isRightButtonDisabled
@@ -33,7 +33,7 @@ const PromoSlider = (props) => {
           type="button"
           disabled={isLeftButtonDisabled}
           onClick={() => {
-            toLeftSlideClick(promoSlides, currentPromoSlide);
+            onLeftSlideClick(promoSlides, currentPromoSlide);
           }}
         >
         </button>
@@ -55,7 +55,7 @@ const PromoSlider = (props) => {
           type="button"
           disabled={isRightButtonDisabled}
           onClick={() => {
-            toRightSlideClick(promoSlides, currentPromoSlide);
+            onRightSlideClick(promoSlides, currentPromoSlide);
           }}
         >
         </button>
@@ -71,8 +71,8 @@ PromoSlider.propTypes = {
   promoSlides: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
   currentPromoSlide: PropTypes.string.isRequired,
 
-  toLeftSlideClick: PropTypes.func.isRequired,
-  toRightSlideClick: PropTypes.func.isRequired,
+  onLeftSlideClick: PropTypes.func.isRequired,
+  onRightSlideClick: PropTypes.func.isRequired,
 
   isLeftButtonDisabled: PropTypes.bool.isRequired,
   isRightButtonDisabled: PropTypes.bool.isRequired,
@@ -88,13 +88,13 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  toLeftSlideClick(promoSlides, currentPromoSlide) {
+  onLeftSlideClick(promoSlides, currentPromoSlide) {
     let newSlide = getPreviousElement(promoSlides, currentPromoSlide);
     let isLeftPromoSliderButtonDisabled = getPreviousElement(promoSlides, currentPromoSlide) === promoSlides[0];
     dispatch(promoSlideLeft(newSlide, isLeftPromoSliderButtonDisabled));
   },
 
-  toRightSlideClick(promoSlides, currentPromoSlide) {
+  onRightSlideClick(promoSlides, currentPromoSlide) {
     let newSlide = getNextElement(promoSlides, currentPromoSlide);
     let isRightPromoSliderButtonDisabled = getNextElement(promoSlides, currentPromoSlide) === promoSlides[promoSlides.length - 1];
     dispatch(promoSlideRight(newSlide, isRightPromoSliderButtonDisabled));
