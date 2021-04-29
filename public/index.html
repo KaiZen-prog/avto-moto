@@ -8,32 +8,6 @@
     <link href="fonts/open-sans-v18-latin_cyrillic-600.woff2" rel="preload" as="font">
     <link href="fonts/open-sans-v18-latin_cyrillic-700.woff2" rel="preload" as="font">
     <link href="fonts/roboto-v27-latin_cyrillic-regular.woff2" rel="preload" as="font">
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=c7d4e8df-d593-4448-b5be-a138e2e09040&lang=en_US" type="text/javascript">
-    </script>
-    <script type="text/javascript">
-      ymaps.ready(function () {
-        document.querySelector(".contacts__map-img").classList.add("visually-hidden");
-
-        var myMap = new ymaps.Map('map', {
-                  center: [59.96817146, 30.31640003],
-                  zoom: 16
-                }, {
-                  searchControlProvider: 'yandex#search'
-                }),
-
-                myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-                  hintContent: 'Собственный значок метки',
-                  balloonContent: 'Это красивая метка'
-                }, {
-                  iconLayout: 'default#image',
-                  iconImageHref: 'img/map-pin.svg',
-                  iconImageSize: [34, 42],
-                  iconImageOffset: [0, -38]
-                });
-
-        myMap.geoObjects.add(myPlacemark)
-      });
-    </script>
     <title>avto-moto</title>
   </head>
   <body>

@@ -1,8 +1,9 @@
 import {extend} from "../../../utils/common";
 import {ActionType} from "../../actions";
+import {reviewsMocks} from "../../../mocks/mocks";
 
 const initialState = {
-  reviews: [],
+  reviews: reviewsMocks,
 };
 
 const reviewsReducer = (state = initialState, action) => {

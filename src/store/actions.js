@@ -5,12 +5,20 @@ export const ActionType = {
   ADD_REVIEW: `ADD_REVIEW`
 };
 
-export const promoSlideLeft = () => ({
-  type: ActionType.PROMO_SLIDE_LEFT
+export const promoSlideLeft = (newSlide, isLeftPromoSliderButtonDisabled) => ({
+  type: ActionType.PROMO_SLIDE_LEFT,
+  payload: {
+    newSlide,
+    isLeftPromoSliderButtonDisabled
+  }
 });
 
-export const promoSlideRight = () => ({
-  type: ActionType.PROMO_SLIDE_RIGHT
+export const promoSlideRight = (newSlide, isRightPromoSliderButtonDisabled) => ({
+  type: ActionType.PROMO_SLIDE_RIGHT,
+  payload: {
+    newSlide,
+    isRightPromoSliderButtonDisabled
+  }
 });
 
 export const changeInfoTab = (tab) => ({

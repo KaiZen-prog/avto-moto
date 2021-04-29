@@ -2,13 +2,18 @@ import React from "react";
 import {connect} from "react-redux";
 import {promoSlideLeft, promoSlideRight} from "../store/actions";
 import PropTypes from "prop-types";
+import {getPreviousElement, getNextElement} from "../../../utils/common";
 
 const PromoSlider = (props) => {
 
   const {
-    currentPromoSlider,
+    promoPreviews,
+    promoSlides,
+    currentPromoSlide,
+
     toLeftSlideClick,
     toRightSlideClick,
+
     isLeftButtonDisabled,
     isRightButtonDisabled
   } = props;
@@ -16,7 +21,7 @@ const PromoSlider = (props) => {
   return (
     <div className="product-section__promo-slider promo-slider">
       <div className="promo-slider__slide">
-        <img className="promo-slider__preview-image" src={currentPromoSlider} width="600" height="375" alt="превью автомобиля"/>
+        <img className="promo-slider__preview-image" src={currentPromoSlide} width="600" height="375" alt="превью автомобиля"/>
       </div>
       <div className="promo-slider__panel">
         <button
@@ -27,20 +32,16 @@ const PromoSlider = (props) => {
           }
           type="button"
           disabled={isLeftButtonDisabled}
-          onClick={toLeftSlideClick}
+          onClick={toLeftSlideClick(promoSlides, currentPromoSlide)}
         >
         </button>
 
         <ul className="promo-slider__preview-list">
-          <li>
-            <img className="promo-slider__preview-image" src="img/preview-1.jpg" width="128" height="80" alt="превью автомобиля"/>
-          </li>
-          <li>
-            <img className="promo-slider__preview-image" src="../img/preview-2.jpg" width="128" height="80" alt="превью автомобиля"/>
-          </li>
-          <li>
-            <img className="promo-slider__preview-image" src="./img/preview-3.jpg" width="128" height="80" alt="превью автомобиля"/>
-          </li>
+          {promoPreviews.map((preview, i) => (
+            <li key={i}>
+              <img className="promo-slider__preview-image" src={preview} width="128" height="80" alt="превью автомобиля"/>
+            </li>
+          ))}
         </ul>
 
         <button
@@ -51,7 +52,7 @@ const PromoSlider = (props) => {
           }
           type="button"
           disabled={isRightButtonDisabled}
-          onClick={toRightSlideClick}
+          onClick={toRightSlideClick(promoSlides, currentPromoSlide)}
         >
         </button>
       </div>
@@ -62,7 +63,9 @@ const PromoSlider = (props) => {
 PromoSlider.displayName = `PromoSlider`;
 
 PromoSlider.propTypes = {
-  currentPromoSlider: PropTypes.string.isRequired,
+  promoPreviews: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+  promoSlides: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+  currentPromoSlide: PropTypes.string.isRequired,
 
   toLeftSlideClick: PropTypes.func.isRequired,
   toRightSlideClick: PropTypes.func.isRequired,
@@ -72,18 +75,25 @@ PromoSlider.propTypes = {
 };
 
 const mapStateToProps = (state) => ({
-  currentPromoSlider: state.APP_PROCESS.currentPromoSlide,
+  promoPreviews: state.APP_PROCESS.promoPreviews,
+  promoSlides: state.APP_PROCESS.promoSlides,
+  currentPromoSlide: state.APP_PROCESS.currentPromoSlide,
+
   isLeftButtonDisabled: state.APP_PROCESS.isLeftPromoSliderButtonDisabled,
   isRightButtonDisabled: state.APP_PROCESS.isRightPromoSliderButtonDisabled
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  toLeftSlideClick() {
-    dispatch(promoSlideLeft());
+  toLeftSlideClick(promoSlides, currentPromoSlide) {
+    let newSlide = getPreviousElement(promoSlides, currentPromoSlide);
+    let isLeftPromoSliderButtonDisabled = getPreviousElement(promoSlides, currentPromoSlide) === promoSlides[0];
+    dispatch(promoSlideLeft(newSlide, isLeftPromoSliderButtonDisabled));
   },
 
-  toRightSlideClick() {
-    dispatch(promoSlideRight());
+  toRightSlideClick(promoSlides, currentPromoSlide) {
+    let newSlide = getNextElement(promoSlides, currentPromoSlide);
+    let isRightPromoSliderButtonDisabled = getNextElement(promoSlides, currentPromoSlide) === promoSlides[promoSlides.length - 1];
+    dispatch(promoSlideRight(newSlide, isRightPromoSliderButtonDisabled));
   },
 });
 

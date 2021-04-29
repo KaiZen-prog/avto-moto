@@ -1,29 +1,33 @@
 import {extend} from "../../../utils/common";
 import {ActionType} from "../../actions";
-import {PromoSlides, InfoTabs} from "../../../const";
-import {getPreviousElement, getNextElement} from "../../../utils/common";
+import {infoTabsMocks, productInfoMocks, promoSlidesMocks, promoPreviewsMocks} from "../../../mocks/mocks";
 
 const initialState = {
-  currentPromoSlide: PromoSlides[0],
+  productInfo: productInfoMocks,
+
+  promoPreviews: promoPreviewsMocks,
+  promoSlides: promoSlidesMocks,
+  currentPromoSlide: promoSlidesMocks[0],
+
   isLeftPromoSliderButtonDisabled: true,
   isRightPromoSliderButtonDisabled: false,
-  activeInfoTab: InfoTabs.CHARACTERISTICS
+  activeInfoTab: infoTabsMocks.CHARACTERISTICS
 };
 
 const appProcess = (state = initialState, action) => {
   switch (action.type) {
     case ActionType.PROMO_SLIDE_LEFT:
       return extend(state, {
-        currentPromoSlide: getPreviousElement(PromoSlides, state.currentPromoSlide),
-        isLeftPromoSliderButtonDisabled: getPreviousElement(PromoSlides, state.currentPromoSlide) === PromoSlides[0],
+        currentPromoSlide: action.payload.newSlide,
+        isLeftPromoSliderButtonDisabled: action.payload.isLeftPromoSliderButtonDisabled,
         isRightPromoSliderButtonDisabled: false
       });
 
     case ActionType.PROMO_SLIDE_RIGHT:
       return extend(state, {
-        currentPromoSlide: getNextElement(PromoSlides, state.currentPromoSlide),
+        currentPromoSlide: action.payload.newSlide,
         isLeftPromoSliderButtonDisabled: false,
-        isRightPromoSliderButtonDisabled: getNextElement(PromoSlides, state.currentPromoSlide) === PromoSlides[PromoSlides.length - 1]
+        isRightPromoSliderButtonDisabled: action.payload.isRightPromoSliderButtonDisabled
       });
 
     case ActionType.CHANGE_INFO_TAB:

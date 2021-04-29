@@ -2,10 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import {changeInfoTab} from "../store/actions";
 import {connect} from "react-redux";
-import {InfoTabs} from "../const";
 import Characteristics from "./characteristics";
 import Contacts from "./contacts";
 import Reviews from "./reviews";
+import {infoTabsMocks} from "../mocks/mocks";
 
 const InfoTabSection = (props) => {
 
@@ -21,11 +21,11 @@ const InfoTabSection = (props) => {
           <a
             className={
               `info-tab__buttons-item${
-                activeInfoTab === InfoTabs.CHARACTERISTICS ? ` info-tab__buttons-item--active` : ``
+                activeInfoTab === infoTabsMocks.CHARACTERISTICS ? ` info-tab__buttons-item--active` : ``
               }`
             }
             onClick={() => {
-              onInfoTabChange(InfoTabs.CHARACTERISTICS);
+              onInfoTabChange(infoTabsMocks.CHARACTERISTICS);
             }}
             href="#nowhere"
           >
@@ -37,11 +37,11 @@ const InfoTabSection = (props) => {
           <a
             className={
               `info-tab__buttons-item${
-                activeInfoTab === InfoTabs.REVIEWS ? ` info-tab__buttons-item--active` : ``
+                activeInfoTab === infoTabsMocks.REVIEWS ? ` info-tab__buttons-item--active` : ``
               }`
             }
             onClick={() => {
-              onInfoTabChange(InfoTabs.REVIEWS);
+              onInfoTabChange(infoTabsMocks.REVIEWS);
             }}
             href="#nowhere"
           >
@@ -53,11 +53,11 @@ const InfoTabSection = (props) => {
           <a
             className={
               `info-tab__buttons-item${
-                activeInfoTab === InfoTabs.CONTACTS ? ` info-tab__buttons-item--active` : ``
+                activeInfoTab === infoTabsMocks.CONTACTS ? ` info-tab__buttons-item--active` : ``
               }`
             }
             onClick={() => {
-              onInfoTabChange(InfoTabs.CONTACTS);
+              onInfoTabChange(infoTabsMocks.CONTACTS);
             }}
             href="#nowhere"
           >
@@ -67,9 +67,9 @@ const InfoTabSection = (props) => {
       </ul>
 
       <div className="info-tab__slides">
-        <Characteristics isTabActive={activeInfoTab === InfoTabs.CHARACTERISTICS}/>
-        <Reviews isTabActive={activeInfoTab === InfoTabs.REVIEWS}/>
-        <Contacts isTabActive={activeInfoTab === InfoTabs.CONTACTS}/>
+        <Characteristics isTabActive={activeInfoTab === infoTabsMocks.CHARACTERISTICS}/>
+        <Reviews isTabActive={activeInfoTab === infoTabsMocks.REVIEWS}/>
+        <Contacts isTabActive={activeInfoTab === infoTabsMocks.CONTACTS}/>
       </div>
     </section>
   );

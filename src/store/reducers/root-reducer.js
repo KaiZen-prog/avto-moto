@@ -1,5 +1,5 @@
 import {combineReducers} from "redux";
-import {reviewsReducer} from "./comments-reducer/reviews-reducer";
+import {reviewsReducer} from "./reviews-reducer/reviews-reducer";
 import {appProcess} from "./app-process/app-process";
 
 export const NameSpace = {
