@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import {YMaps, Map, Placemark} from 'react-yandex-maps';
-import {mapDataMocks} from "../mocks/mocks";
+import YandexMap from "../yandex-map/map";
 
 const Contacts = ({isTabActive}) => {
   return (
@@ -43,20 +42,7 @@ const Contacts = ({isTabActive}) => {
         <div className="contacts__map-container">
           <img className="contacts__map-img" src="img/map.jpg" width="431" height="271"
             alt="Санкт-Петербург, набережная реки Карповки, дом 5"/>
-          <div className="contacts__map">
-            <YMaps>
-              <Map
-                defaultState={{
-                  center: mapDataMocks.CENTER,
-                  zoom: mapDataMocks.ZOOM,
-                }}
-                width={mapDataMocks.WIDTH}
-                height={mapDataMocks.HEIGHT}
-              >
-                <Placemark geometry={mapDataMocks.MARK} />
-              </Map>
-            </YMaps>
-          </div>
+          <YandexMap/>
         </div>
       </div>
     </div>

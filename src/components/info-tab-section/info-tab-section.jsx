@@ -1,11 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
-import {changeInfoTab} from "../store/actions";
+import {changeInfoTab} from "../../store/actions";
 import {connect} from "react-redux";
-import Characteristics from "./characteristics";
-import Contacts from "./contacts";
-import Reviews from "./reviews";
-import {infoTabsMocks} from "../mocks/mocks";
+import Characteristics from "../characteristics/characteristics";
+import Contacts from "../contacts/contacts";
+import Reviews from "../reviews/reviews";
+import {infoTabsMocks} from "../../mocks/mocks";
 
 const InfoTabSection = (props) => {
 

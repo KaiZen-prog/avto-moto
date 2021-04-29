@@ -1,8 +1,8 @@
 import React from "react";
-import Header from "./header";
-import InfoTabSection from "./info-tab-section";
-import Footer from "./footer";
-import ProductSection from "./product-section";
+import Header from "../header/header";
+import InfoTabSection from "../info-tab-section/info-tab-section";
+import Footer from "../footer/footer";
+import ProductSection from "../product-section/product-section";
 
 const App = () => {
   return (

@@ -1,8 +1,8 @@
 import React from "react";
 import {connect} from "react-redux";
-import {promoSlideLeft, promoSlideRight} from "../store/actions";
+import {promoSlideLeft, promoSlideRight} from "../../store/actions";
 import PropTypes from "prop-types";
-import {getPreviousElement, getNextElement} from "../../../utils/common";
+import {getPreviousElement, getNextElement} from "../../utils/common";
 
 const PromoSlider = (props) => {
 
@@ -32,7 +32,9 @@ const PromoSlider = (props) => {
           }
           type="button"
           disabled={isLeftButtonDisabled}
-          onClick={toLeftSlideClick(promoSlides, currentPromoSlide)}
+          onClick={() => {
+            toLeftSlideClick(promoSlides, currentPromoSlide);
+          }}
         >
         </button>
 
@@ -52,7 +54,9 @@ const PromoSlider = (props) => {
           }
           type="button"
           disabled={isRightButtonDisabled}
-          onClick={toRightSlideClick(promoSlides, currentPromoSlide)}
+          onClick={() => {
+            toRightSlideClick(promoSlides, currentPromoSlide);
+          }}
         >
         </button>
       </div>

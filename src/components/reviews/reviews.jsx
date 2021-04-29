@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import {withReviews} from '../hocs/with-reviews';
-import ReviewForm from '../components/review-form';
+import {withReviews} from '../../hocs/with-reviews';
+import ReviewForm from '../review-form/review-form';
 
 const Reviews = (props) => {
 

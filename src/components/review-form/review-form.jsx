@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Repeat} from '../utils/common';
+import {Repeat} from '../../utils/common';
 
 const ReviewForm = (props) => {
 

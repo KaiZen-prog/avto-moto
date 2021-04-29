@@ -1,6 +1,6 @@
 import React from "react";
-import PromoSlider from "./promo-slider";
-import ProductCard from "./product-card";
+import PromoSlider from "../promo-slider/promo-slider";
+import ProductCard from "../product-card/product-card";
 
 const ProductSection = () => {
   return (
