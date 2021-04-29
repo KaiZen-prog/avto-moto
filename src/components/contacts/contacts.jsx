@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import YandexMap from "../yandex-map/map";
+import YandexMap from "../yandex-map/yandex-map";
 
 const Contacts = ({isTabActive}) => {
   return (
