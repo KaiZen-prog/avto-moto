@@ -28,16 +28,16 @@ const Contacts = ({isTabActive}) => {
           <h3 className="contacts__title">
             Телефон
           </h3>
-          <p className="contacts__line">
+          <a className="contacts__line contacts__line--link" href="tel:88003335599">
             8 (800) 333-55-99
-          </p>
+          </a>
 
           <h3 className="contacts__title">
             E-mail
           </h3>
-          <p className="contacts__line">
+          <a className="contacts__line contacts__line--link" href="mailto:info@avto-moto.ru">
             info@avto-moto.ru
-          </p>
+          </a>
         </div>
         <div className="contacts__map-container">
           <img className="contacts__map-img" src="img/map.jpg" width="431" height="271"

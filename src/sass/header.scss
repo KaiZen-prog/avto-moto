@@ -88,4 +88,9 @@
 
   margin-left: 37px;
   padding: 31px 16px 30px 16px;
+
+  &:hover,
+  &:focus {
+    background-color: $color-form-grey;
+  }
 }

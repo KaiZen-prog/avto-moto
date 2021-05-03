@@ -8,6 +8,8 @@
 
 .info-tab__buttons-list {
   display: flex;
+  flex-wrap: wrap;
+
   align-items: stretch;
   align-content: stretch;
 

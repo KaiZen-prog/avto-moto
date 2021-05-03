@@ -12,8 +12,10 @@
 }
 
 .footer__nav-list {
-  list-style: none;
   display: flex;
+  flex-wrap: wrap;
+
+  list-style: none;
 
   margin-top: 0;
   margin-right: -49px;
@@ -35,4 +37,9 @@
 
   margin-right: 49px;
   padding: 30px 9px 30px 9px;
+
+  &:hover,
+  &:focus {
+    background-color: $color-form-grey;
+  }
 }

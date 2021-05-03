@@ -27,6 +27,8 @@
 }
 
 .contacts__line {
+  display: block;
+
   font-family: "Open Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: 600;
@@ -42,6 +44,13 @@
   &--address-line {
     margin: 0;
     padding: 0;
+  }
+
+  &--link {
+    &:hover,
+    &:focus {
+      color: $color-red-hovered;
+    }
   }
 }
 

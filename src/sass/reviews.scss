@@ -189,4 +189,9 @@
   color: $color-red;
   background-color: $color-white;
   border: none;
+
+  &:hover,
+  &:focus {
+    color: $color-red-hovered;
+  }
 }

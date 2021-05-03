@@ -62,6 +62,11 @@
   background-image: url("../img/icon-arrow-left.svg");
   background-repeat: no-repeat;
 
+  &:hover,
+  &:focus {
+    background-image: url("../img/icon-arrow-left-hovered.svg");
+  }
+
   &--disabled {
     background-image: url("../img/icon-arrow-left-disabled.svg");
   }
@@ -70,6 +75,11 @@
 .promo-slider__right-button {
   background-image: url("../img/icon-arrow-right.svg");
   background-repeat: no-repeat;
+
+  &:hover,
+  &:focus {
+    background-image: url("../img/icon-arrow-right-hovered.svg");
+  }
 
   &--disabled {
     background-image: url("../img/icon-arrow-right-disabled.svg");
