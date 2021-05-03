@@ -21,7 +21,7 @@ const PromoSlider = (props) => {
   return (
     <div className="product-section__promo-slider promo-slider">
       <div className="promo-slider__slide">
-        <img className="promo-slider__preview-image" src={currentPromoSlide} width="600" height="375" alt="превью автомобиля"/>
+        <img src={currentPromoSlide} width="600" height="375" alt="превью автомобиля"/>
       </div>
       <div className="promo-slider__panel">
         <button
@@ -31,11 +31,13 @@ const PromoSlider = (props) => {
             }`
           }
           type="button"
+          aria-label="Слайд назад"
           disabled={isLeftButtonDisabled}
           onClick={() => {
             onLeftSlideClick(promoSlides, currentPromoSlide);
           }}
         >
+          <span className="visually-hidden" aria-hidden="true">Слайд назад</span>
         </button>
 
         <ul className="promo-slider__preview-list">
@@ -53,11 +55,13 @@ const PromoSlider = (props) => {
             }`
           }
           type="button"
+          aria-label="Слайд вперед"
           disabled={isRightButtonDisabled}
           onClick={() => {
             onRightSlideClick(promoSlides, currentPromoSlide);
           }}
         >
+          <span className="visually-hidden" aria-hidden="true">Слайд вперед</span>
         </button>
       </div>
     </div>

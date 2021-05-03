@@ -70,6 +70,7 @@
 .header__nav-list {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
 
   margin: 0;
   padding-left: 44px;

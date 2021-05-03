@@ -1,6 +1,7 @@
 .product-card {
+  width: 537px;
+
   padding-top: 74px;
-  padding-left: 29px;
 }
 
 .product-card__header {
@@ -19,8 +20,9 @@
 .product-card__parameters-list {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
 
-  margin-top: 0;
+  margin-top: -50px;
   margin-bottom: 37px;
   padding-top: 61px;
   padding-left: 10px;
@@ -39,7 +41,7 @@
 
   color: $color-grey-transparent;
 
-  margin-top: 0;
+  margin-top: 50px;
   margin-right: 14px;
   margin-bottom: 0;
 
@@ -105,6 +107,7 @@
 
 .product-card__price-wrapper {
   display: flex;
+  flex-wrap: wrap;
 
   margin-bottom: 37px;
   padding-left: 4px;
@@ -112,6 +115,8 @@
 
 .product-card__price {
   display: block;
+
+  width: 190px;
 
   font-family: "Open Sans", "Arial", sans-serif;
   font-style: normal;
@@ -127,7 +132,7 @@
   &--old {
     position: relative;
 
-    margin-left: 35px;
+    margin-left: 31px;
     padding-top: 12px;
 
     font-weight: normal;
@@ -157,10 +162,9 @@
   @include button;
 
   width: 196px;
-  height: 52px;
 
   margin-bottom: 16px;
-  padding: 16px 5px 16px 7px;
+  padding: 16px 5px 17px 7px;
 
   color: $color-white;
   background-color: $color-red;
@@ -175,9 +179,8 @@
   @include button;
 
   width: 223px;
-  height: 52px;
 
-  padding: 16px 5px 16px 7px;
+  padding: 16px 5px 15px 7px;
 
   color: $color-red;
   border: 1px solid $color-red;

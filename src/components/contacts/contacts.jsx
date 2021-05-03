@@ -13,10 +13,10 @@ const Contacts = ({isTabActive}) => {
           <h3 className="contacts__title contacts__title--address">
             Адрес
           </h3>
-          <p className="contacts__line">
+          <div className="contacts__line">
             <p className="contacts__line contacts__line--address-line">Санкт-Петербург,</p>
             <p className="contacts__line contacts__line--address-line">набережная реки Карповки, дом 5</p>
-          </p>
+          </div>
 
           <h3 className="contacts__title">
             Режим работы

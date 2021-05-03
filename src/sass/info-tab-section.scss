@@ -8,6 +8,9 @@
 
 .info-tab__buttons-list {
   display: flex;
+  align-items: stretch;
+  align-content: stretch;
+
   list-style: none;
 
   margin: 0;
@@ -15,12 +18,15 @@
 }
 
 .info-tab__buttons-item {
-  display: block;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
 
   width: 195px;
-  height: 50px;
+  height: 100%;
 
-  padding: 10px;
+  padding: 10px 10px 11px;
 
   text-align: center;
 

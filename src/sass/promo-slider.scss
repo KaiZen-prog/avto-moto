@@ -1,6 +1,9 @@
 .promo-slider {
   position: relative;
 
+  width: 600px;
+
+  margin-right: 54px;
   padding-top: 90px;
 
   &::before {
@@ -75,12 +78,17 @@
 
 .promo-slider__preview-list {
   display: flex;
+  flex-wrap: wrap;
+
   list-style: none;
 
-  margin: 0 6px 0 31px;
+  width: 459px;
+
+  margin: -25px 6px 0 31px;
   padding-left: 0;
 }
 
 .promo-slider__preview-image {
+  margin-top: 25px;
   margin-right: 25px;
 }
