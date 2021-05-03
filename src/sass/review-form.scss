@@ -109,6 +109,11 @@
   border: 1px solid rgba(72, 73, 77, 0.2);
   box-sizing: border-box;
 
+  &:hover,
+  &:focus {
+    border-color: $color-red-hovered;
+  }
+
   &--author {
     margin-bottom: 16px;
   }
@@ -141,6 +146,10 @@
 
   top: -23px;
   left: 0;
+
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
 
   font-size: 14px;
   line-height: 19px;

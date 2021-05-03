@@ -2,11 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import {connect} from "react-redux";
 
-const Characteristics = ({isTabActive, characteristics}) => {
+const Characteristics = ({characteristics}) => {
   return (
-    <div className={`info-tab__slide info-tab__slide--characteristics characteristics${
-      isTabActive ? `` : ` hidden`
-    }`}>
+    <div className="info-tab__slide info-tab__slide--characteristics characteristics">
       <h2 className="visually-hidden">Характеристики</h2>
       <table className="characteristics__parameters">
         {characteristics.map((entity, i) => (
@@ -28,8 +26,6 @@ const Characteristics = ({isTabActive, characteristics}) => {
 Characteristics.displayName = `Characteristics`;
 
 Characteristics.propTypes = {
-  isTabActive: PropTypes.bool.isRequired,
-
   characteristics: PropTypes.arrayOf(
       PropTypes.shape({
         key: PropTypes.string.isRequired,

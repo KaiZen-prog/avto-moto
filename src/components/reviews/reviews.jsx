@@ -6,7 +6,6 @@ import ReviewForm from "../review-form/review-form";
 const Reviews = (props) => {
 
   const {
-    isTabActive,
     reviews,
     isFormOpened,
     onReviewFormOpen,
@@ -17,9 +16,7 @@ const Reviews = (props) => {
   } = props;
 
   return (
-    <div className={`info-tab__slide reviews${
-      isTabActive ? `` : ` hidden`
-    }`}>
+    <div className="info-tab__slide reviews">
       <h2 className="visually-hidden">Отзывы</h2>
       <button className="reviews__add-review-button" onClick={onReviewFormOpen}>Оставить отзыв</button>
 
@@ -75,8 +72,6 @@ const Reviews = (props) => {
 Reviews.displayName = `Reviews`;
 
 Reviews.propTypes = {
-  isTabActive: PropTypes.bool.isRequired,
-
   reviews: PropTypes.arrayOf(PropTypes.shape({
     author: PropTypes.string.isRequired,
     advantages: PropTypes.string.isRequired,

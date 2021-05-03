@@ -1,12 +1,12 @@
-import React, {lazy, Suspense } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import {changeInfoTab} from "../../store/actions";
 import {connect} from "react-redux";
 import {infoTabsMocks} from "../../mocks/mocks";
 
-const Characteristics = lazy(() => import(`../characteristics/characteristics`));
-const Contacts = lazy(() => import(`../contacts/contacts`));
-const Reviews = lazy(() => import(`../reviews/reviews`));
+import Characteristics from "../characteristics/characteristics";
+import Contacts from "../contacts/contacts";
+import Reviews from "../reviews/reviews";
 
 const InfoTabSection = (props) => {
 
@@ -68,17 +68,17 @@ const InfoTabSection = (props) => {
       </ul>
 
       <div className="info-tab__slides">
-        <Suspense fallback={<div>Загрузка...</div>}>
-          <Characteristics isTabActive={activeInfoTab === infoTabsMocks.CHARACTERISTICS}/>
-        </Suspense>
+        {activeInfoTab === infoTabsMocks.CHARACTERISTICS && (
+          <Characteristics/>
+        )}
 
-        <Suspense fallback={<div>Загрузка...</div>}>
-          <Reviews isTabActive={activeInfoTab === infoTabsMocks.REVIEWS}/>
-        </Suspense>
+        {activeInfoTab === infoTabsMocks.REVIEWS && (
+          <Reviews/>
+        )}
 
-        <Suspense fallback={<div>Загрузка...</div>}>
-          <Contacts isTabActive={activeInfoTab === infoTabsMocks.CONTACTS}/>
-        </Suspense>
+        {activeInfoTab === infoTabsMocks.CONTACTS && (
+          <Contacts/>
+        )}
       </div>
     </section>
   );

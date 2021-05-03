@@ -69,6 +69,12 @@
 
   &--disabled {
     background-image: url("../img/icon-arrow-left-disabled.svg");
+
+    &:hover,
+    &:focus {
+      cursor: default;
+      background-image: url("../img/icon-arrow-left-disabled.svg");
+    }
   }
 }
 
@@ -83,6 +89,12 @@
 
   &--disabled {
     background-image: url("../img/icon-arrow-right-disabled.svg");
+
+    &:hover,
+    &:focus {
+      cursor: default;
+      background-image: url("../img/icon-arrow-right-disabled.svg");
+    }
   }
 }
 

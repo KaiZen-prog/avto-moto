@@ -1,12 +1,9 @@
 import React from "react";
-import PropTypes from "prop-types";
 import YandexMap from "../yandex-map/yandex-map";
 
-const Contacts = ({isTabActive}) => {
+const Contacts = () => {
   return (
-    <div className={`info-tab__slide contacts${
-      isTabActive ? `` : ` hidden`
-    }`}>
+    <div className="info-tab__slide contacts">
       <h2 className="visually-hidden">Контакты</h2>
       <div className="contacts__wrapper">
         <div className="contacts__address-block">
@@ -50,9 +47,5 @@ const Contacts = ({isTabActive}) => {
 };
 
 Contacts.displayName = `Contacts`;
-
-Contacts.propTypes = {
-  isTabActive: PropTypes.bool.isRequired
-};
 
 export default Contacts;

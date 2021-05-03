@@ -26,6 +26,8 @@
   line-height: 25px;
   letter-spacing: 1.13em;
 
+  cursor: default;
+
   &::before {
     content: "";
     position: absolute;

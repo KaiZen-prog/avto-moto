@@ -36,11 +36,15 @@ export const withReviews = (Component) => {
     onReviewFormOpen() {
       this.setState({isFormOpened: true});
       document.addEventListener(`keydown`, this.onClosePopupKeydown);
+      document.body.style.overflow = `hidden`;
+      document.body.style.position = `fixed`;
     }
 
     onReviewFormClose() {
       this.setState({isFormOpened: false});
       document.removeEventListener(`keydown`, this.onClosePopupKeydown);
+      document.body.style.overflow = `auto`;
+      document.body.style.position = `static`;
     }
 
     onValueChange(evt) {
