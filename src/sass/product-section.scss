@@ -1,7 +1,9 @@
 .product-section {
   display: flex;
+  justify-content: space-between;
 
-  width: $page-container-width;
+  max-width: $page-container-width;
+  min-width: $page-min-width;
   min-height: 494px;
 
   font-weight: 400;

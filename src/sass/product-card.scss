@@ -114,10 +114,6 @@
 }
 
 .product-card__price {
-  display: block;
-
-  width: 190px;
-
   font-family: "Open Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -132,7 +128,7 @@
   &--old {
     position: relative;
 
-    margin-left: 31px;
+    margin-left: 34px;
     padding-top: 12px;
 
     font-weight: normal;

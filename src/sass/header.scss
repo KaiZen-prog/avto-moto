@@ -4,8 +4,10 @@
 
 .header__wrapper {
   display: flex;
+  justify-content: space-between;
 
-  width: $page-container-width;
+  max-width: $page-container-width;
+  min-width: $page-min-width;
   min-height: 84px;
 
   font-weight: 400;
@@ -63,10 +65,6 @@
     font-size: 14px;
     line-height: 19px;
   }
-}
-
-.header__nav {
-  margin-left: auto;
 }
 
 .header__nav-list {

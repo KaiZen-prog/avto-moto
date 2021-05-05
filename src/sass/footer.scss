@@ -5,7 +5,8 @@
 }
 
 .footer__nav {
-  width: 1200px;
+  max-width: 1245px;
+  min-width: $page-min-width;
 
   margin: 0 auto;
   padding-left: 7px;
@@ -14,11 +15,11 @@
 .footer__nav-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
 
   list-style: none;
 
   margin-top: 0;
-  margin-right: -49px;
   margin-bottom: 0;
   padding: 0;
 }
@@ -35,7 +36,6 @@
 
   color: $color-dark;
 
-  margin-right: 49px;
   padding: 30px 9px 30px 9px;
 
   &:hover,
