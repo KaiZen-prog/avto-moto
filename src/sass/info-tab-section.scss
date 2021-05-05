@@ -1,8 +1,10 @@
 .info-tab {
-  width: $page-container-width;
+  max-width: $page-container-width;
+  min-width: $page-min-width;
   min-height: 410px;
 
   margin: 0 auto;
+  padding-right: 5px;
   padding-left: 5px;
 }
 
