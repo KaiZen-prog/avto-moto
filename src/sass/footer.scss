@@ -5,24 +5,37 @@
 }
 
 .footer__nav {
-  max-width: 1245px;
+  max-width: 1270px;
   min-width: $page-min-width;
 
-  margin: 0 auto;
-  padding-left: 7px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 35px;
+  padding-left: 35px;
 }
+
 
 .footer__nav-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
 
   list-style: none;
 
   margin-top: 0;
   margin-bottom: 0;
+  margin-left: -31px;
   padding: 0;
 }
+
+.footer__nav-item {
+
+  margin-left: 31px;
+
+  &:last-child {
+    margin-left: 20px;
+  }
+}
+
 
 .footer__nav-link {
   display: block;
@@ -33,10 +46,9 @@
   font-weight: 600;
   font-size: 16px;
   line-height: 22px;
+  padding: 30px 18px;
 
   color: $color-dark;
-
-  padding: 30px 9px 30px 9px;
 
   &:hover,
   &:focus {

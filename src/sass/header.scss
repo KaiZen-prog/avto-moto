@@ -6,13 +6,15 @@
   display: flex;
   justify-content: space-between;
 
-  max-width: $page-container-width;
+  max-width: 1270px;
   min-width: $page-min-width;
   min-height: 84px;
 
   font-weight: 400;
 
   margin: 0 auto;
+  padding-right: 35px;
+  padding-left: 35px;
 }
 
 .header__logo {
